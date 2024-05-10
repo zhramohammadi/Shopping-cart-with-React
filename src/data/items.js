@@ -1,27 +1,51 @@
 const productList = [
     {
         id:'1',
-        title: 'product',
-        price:99,
-        image:'/images/product.jpg' 
+        title: 'headset',
+        price:59,
+        image:'/images/headset.jpg' 
     },
     {
         id:'2',
-        title: 'product',
-        price:99,
-        image:'/images/product.jpg' 
+        title: 'headset',
+        price:73,
+        image:'/images/headset2.jpg' 
     },
     {
         id:'3',
-        title: 'product',
-        price:99,
-        image:'/images/product.jpg' 
+        title: 'ipad',
+        price:4500,
+        image:'/images/ipad1.jpg' 
     },
     {
         id:'4',
-        title: 'product',
-        price:99,
-        image:'/images/product.jpg' 
+        title: 'ipad',
+        price:4000,
+        image:'/images/ipad2.jpg' 
+    },
+    {
+        id:'5',
+        title: 'Xiaomi',
+        price:1000,
+        image:'/images/Xiaomi.jpg' 
+    },
+    {
+        id:'6',
+        title: 'iphon',
+        price:3000,
+        image:'/images/iphon.jpg' 
+    },
+    {
+        id:'7',
+        title: 'mac',
+        price:5000,
+        image:'/images/mac.png' 
+    },
+    {
+        id:'8',
+        title: 'samsung',
+        price:2500,
+        image:'/images/samsung.webp' 
     },
 ]
 
