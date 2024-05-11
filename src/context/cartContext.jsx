@@ -64,6 +64,8 @@ export function CartProvider({children}){
             const productData = getProductData(item.id)
             totalAmount += productData.price * item.quantity
         })
+
+        return totalAmount;
     }
 
     const ContextValue = {

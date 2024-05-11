@@ -40,7 +40,7 @@ function ProductItem({product}){
 
                         <Button
                             onClick={()=> cart.deleteFromCart(product.id)}
-                             className="my-4 "variant="btn btn-danger">حذف از سبد خرید </Button>
+                             className="my-4 "variant="btn btn-outline-danger">حذف از سبد خرید </Button>
                     </>
                 ): (
                     <Button onClick={()=> cart.addItemToCart(product.id)} variant="btn btn-outline-secondary" className="text-white">افزودن به سبد خرید</Button>
