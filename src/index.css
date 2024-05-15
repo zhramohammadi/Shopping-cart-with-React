@@ -7,3 +7,8 @@ body{
 .card-bg{
   background-color: #1a1c1e;
 }
+
+.opacity{
+  opacity:0.5;
+}
+

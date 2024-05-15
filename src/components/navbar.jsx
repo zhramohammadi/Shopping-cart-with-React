@@ -1,5 +1,7 @@
 
 import { useState, useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import {Navbar as NavbarBs, Button, Modal} from 'react-bootstrap'
 import {BsCart} from 'react-icons/bs'
 import {CartContext} from '../context/cartContext'
@@ -9,10 +11,21 @@ function Navbar(){
     const [showModal, setShowModal]= useState(false);
     const cart = useContext(CartContext);
 
+    const navigate = useNavigate();
+    function handleLoginPage(){
+        navigate('/Login')
+     }
+ 
+    function handleRegisterPage(){
+        navigate('/Register')
+     }
+ 
+
    const productCount =  cart.items.reduce((sum, product)=> sum+ product.quantity, 0)
 
     const handleShow = ()=> {setShowModal (true)};
     const handleClose = ()=> {setShowModal (false)};
+    
 
    async function checkout(){
     const response =    await fetch('http://localhost:3000/api',{
@@ -32,6 +45,16 @@ function Navbar(){
     return(
       <>
          <NavbarBs className='border-bottom border-secondary'>
+                <Button className='text-white d-flex' variant='btn btn-outline-secondary'>
+                       <div onClick={handleLoginPage}>
+                        <div>ورود / </div>
+                        <Link to='login'></Link>
+                       </div>
+                       <div onClick={handleRegisterPage}>
+                        <div>ثبت نام</div>
+                        <Link to={'register'}></Link>  
+                       </div>
+                 </Button>
              <NavbarBs.Collapse className='justify-content-end'>
                  <Button onClick={handleShow} variant='btn btn-outline-secondary ' 
                  className=' text-white'>
@@ -40,6 +63,7 @@ function Navbar(){
                  </Button>
              </NavbarBs.Collapse>
          </NavbarBs>
+
 
          <Modal show={showModal} onHide={handleClose} contentClassName='card-bg' dir='rtl'>
             <Modal.Header >
