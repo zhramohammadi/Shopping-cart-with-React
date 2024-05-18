@@ -9,12 +9,12 @@ function Register(){
     }
     return(
         <Container  className=" mt-5" dir="rtl">
-            <Row>
-                <Col className="d-flex justify-content-center align-items-center ">
-                    <Image src="../public/images/register.svg" width={650}/>
+            <Row className="d-flex justify-content-center align-items-center " >
+                <Col className="d-flex justify-content-center align-items-center d-none d-lg-block">
+                    <Image className="col-12"  src="../public/images/register.svg" width={650}/>
                 </Col>
                 <Col  className="d-flex justify-content-center align-items-center p-5 ">
-                <Form className="col-8">
+                <Form className="col-lg-8 col-md-10 col-sm-12 col-12">
                     <Form.Group >
                         <Form.Label>نام و نام خانوادگی:</Form.Label>
                         <Form.Control className="opacity" type="text" placeholder="نام و نام خانوادگی خود را وارد کنید"/>

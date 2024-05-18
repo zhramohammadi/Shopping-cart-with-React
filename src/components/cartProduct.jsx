@@ -10,20 +10,20 @@ function CartProduct({id, quantity,product}){
     return(
         <>
         <p className="border-bottom border-secondary"></p>
-        <img src={productData.image} height={'70px'} className="row float-left m-auto" alt="" />
+        <img src={productData.image} height={'70px'} className="row  m-auto" alt="" />
         <p>نام محصول:{productData.title}</p>
         <p>تعداد:{quantity}</p>
         <p>قیمت:{quantity * productData.price}</p>
 
         <Form as={Row}>
-            <Col >
+            <Col className="">
                 <Button
                  onClick={()=> cart.addItemToCart(id)}
                   size="sm" className=" text-white"variant="btn btn-outline-secondary">+</Button>
                  <Button
                  onClick={()=> cart.removeItemFromCart(id)}
                  size="sm" className="mx-2 text-white"variant="btn btn-outline-secondary">-</Button>
-                 <Button size="sm" className=" mb-3 text-white mt-3" variant="btn btn-outline-danger" onClick={()=>cart.deleteFromCart(id) }>حذف</Button>
+                 <Button size="sm" className=" mb-1 text-white mt-1" variant="btn btn-outline-danger" onClick={()=>cart.deleteFromCart(id) }>حذف</Button>
             </Col>
         </Form>
         </>

@@ -10,9 +10,9 @@ function Login(){
    }
     return (
         <Container  className="mt-5">
-        <Row>
-          <Col className="d-flex justify-content-center align-items-center p-5">
-            <Form className="col-9" dir="rtl">
+        <Row className="d-flex justify-content-center align-items-center ">
+          <Col  className="d-flex justify-content-center align-items-center p-5">
+            <Form className="col-lg-8 col-md-10 col-sm-12 col-12" dir="rtl">
               <Form.Group >
                 <Form.Label>آدرس ایمیل:</Form.Label>
                 <Form.Control className="opacity" type="email" placeholder="ایمیل  خود را وارد کنید" />
@@ -32,8 +32,8 @@ function Login(){
               </div>
             </Form>
           </Col>
-          <Col className="d-flex justify-content-center align-items-center mt-5" >
-            <Image src="../public/images/login.svg" width={700}  alt="تصویر نمونه" />
+          <Col className="d-flex justify-content-center align-items-center mt-5 d-lg-block d-none" >
+            <Image className="col-12" src="../public/images/login.svg" width={700}  alt="تصویر نمونه" />
           </Col>
         </Row>
       </Container>

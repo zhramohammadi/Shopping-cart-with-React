@@ -77,7 +77,7 @@ function Navbar(){
                 <Modal.Body>
                     {productCount >0 ?(
                         <>
-                    <h3 className='mb-4 '> <BsCart className='mx-2'></BsCart>سبد خرید</h3>
+                    <h3 className='mb-3 '> <BsCart className='mx-2'></BsCart>سبد خرید</h3>
                     {cart.items.map((item)=>(
                         <CartProduct key={item.id} id={item.id} quantity={item.quantity}></CartProduct>
                     ))}
@@ -88,9 +88,9 @@ function Navbar(){
                         <h3>سبد خرید خالی است</h3>
                     )}
 
-                    <Button className='mt-4' variant='btn btn-light' onClick={checkout}>ثبت سفارش</Button>
+                    <Button className='mt-2' variant='btn btn-light' onClick={checkout}>ثبت سفارش</Button>
 
-                    <Button onClick={handleClose} variant='btn btn-outline-secondary' className='mt-4 mx-3 text-white'>بستن</Button>
+                    <Button onClick={handleClose} variant='btn btn-outline-secondary' className='mt-2 mx-3 text-white'>بستن</Button>
                     <div className=" text-danger mt-3" style={{ display: showError ? 'block' : 'none' }}>
                           سبد خرید شما خالی است!
                      </div>
