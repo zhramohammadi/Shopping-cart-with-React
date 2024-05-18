@@ -24,23 +24,9 @@ function ProductItem({product}){
                 <Card.Text align='right' className="text-light" dir="rtl">{product.price} تومان</Card.Text>
                 {productQuantity >0? (
                     <>
-                        <Form as={Row}>
-                            <Form.Label column='true' sm='6' className='text-white'>
-                                تعداد:  {productQuantity}
-                            </Form.Label>
-                            <Col sm='6'>
-                            <Button
-                            onClick={()=> cart.addItemToCart(product.id)}
-                             sm='6' className="mx-2 text-white"variant="btn btn-outline-secondary">+</Button>
-                            <Button
-                            onClick={()=> cart.removeItemFromCart(product.id)}
-                            sm='6' className="mx-2 text-white"variant="btn btn-outline-secondary">-</Button>
-                            </Col>
-                        </Form>
-
                         <Button
                             onClick={()=> cart.deleteFromCart(product.id)}
-                             className="my-4 "variant="btn btn-outline-danger">حذف از سبد خرید </Button>
+                             className=""variant="btn btn-outline-danger">حذف از سبد خرید </Button>
                     </>
                 ): (
                     <Button onClick={()=> cart.addItemToCart(product.id)} variant="btn btn-outline-secondary" className="text-white">افزودن به سبد خرید</Button>

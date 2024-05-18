@@ -7,6 +7,7 @@ import Shop from './pages/shop'
 import Success from './pages/Success'
 import Login from './pages/login'
 import Register from './pages/register'
+import handleHomePage from './components/navbar'
 
 function App(){
   return(
@@ -18,6 +19,7 @@ function App(){
         <Route path='/success' element={<Success/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
+        <Route path='/' element={<handleHomePage/>}/>
       
       </Routes>
     </Container>

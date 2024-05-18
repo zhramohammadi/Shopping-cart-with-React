@@ -5,13 +5,15 @@ import { productList } from "../data/items";
 
 function Shop(){
     return (
-        <Row xs={1} md={4} className="g-4">
+        <>
+        <Row xs={1} md={4} className="g-4 mb-5">
             {productList.map((item)=>(
                 <Col align='center' key={item.id}>
                     <ProductItem product={item}/>
                 </Col>
             ))}
         </Row>
+        </>
     )
 }
 

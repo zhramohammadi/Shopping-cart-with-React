@@ -1,12 +1,12 @@
 import { useContext } from "react";
-import { Button } from "react-bootstrap";
+import { Button,Form,Col,Row } from "react-bootstrap";
 import {getProductData} from '../data/items'
 import {CartContext} from '../context/cartContext'
 
-function CartProduct({id, quantity}){
+function CartProduct({id, quantity,product}){
     const cart = useContext(CartContext);
     const productData = getProductData(id)
-
+    const productQuantity = cart.getProductQuantity(product);
     return(
         <>
         <p className="border-bottom border-secondary"></p>
@@ -14,7 +14,18 @@ function CartProduct({id, quantity}){
         <p>نام محصول:{productData.title}</p>
         <p>تعداد:{quantity}</p>
         <p>قیمت:{quantity * productData.price}</p>
-        <Button size="sm" className=" mb-5 text-white" variant="btn btn-outline-danger" onClick={()=>cart.deleteFromCart(id) }>حذف</Button>
+
+        <Form as={Row}>
+            <Col >
+                <Button
+                 onClick={()=> cart.addItemToCart(id)}
+                  size="sm" className=" text-white"variant="btn btn-outline-secondary">+</Button>
+                 <Button
+                 onClick={()=> cart.removeItemFromCart(id)}
+                 size="sm" className="mx-2 text-white"variant="btn btn-outline-secondary">-</Button>
+                 <Button size="sm" className=" mb-3 text-white mt-3" variant="btn btn-outline-danger" onClick={()=>cart.deleteFromCart(id) }>حذف</Button>
+            </Col>
+        </Form>
         </>
     )
 }
