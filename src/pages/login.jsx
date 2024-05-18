@@ -25,7 +25,7 @@ function Login(){
                 ورود
                 <Link to={'/'}></Link>
               </Button>
-              <div className="">
+              <div >
                 اگر حساب کاربردی ندارید <Button onClick={handleRegisterPage}  variant="btn" className="text-info">ثبت نام کنید
                 <Link to={'/register'}></Link>
                 </Button>
@@ -33,7 +33,7 @@ function Login(){
             </Form>
           </Col>
           <Col className="d-flex justify-content-center align-items-center mt-5" >
-            <Image src="../public/images/login.svg" width={600}  alt="تصویر نمونه" />
+            <Image src="../public/images/login.svg" width={700}  alt="تصویر نمونه" />
           </Col>
         </Row>
       </Container>
