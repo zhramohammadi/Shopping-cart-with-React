@@ -9,21 +9,21 @@ function CartProduct({id, quantity,product}){
     const productQuantity = cart.getProductQuantity(product);
     return(
         <>
-        <p className="border-bottom border-secondary"></p>
-        <img src={productData.image} height={'70px'} className="row  m-auto" alt="" />
-        <p>نام محصول:{productData.title}</p>
-        <p>تعداد:{quantity}</p>
-        <p>قیمت:{quantity * productData.price}</p>
+        <p className="border-bottom border-secondary opacity"></p>
+        <img src={productData.image} height={'90px'} className="mt-3 image"  />
+        <p className="mb-2">نام محصول:{productData.title}</p>
+        <p className="mb-2">تعداد:{quantity}</p>
+        <p className="mb-3">قیمت:{quantity * productData.price}</p>
 
         <Form as={Row}>
-            <Col className="">
+            <Col className="mb-2">
                 <Button
                  onClick={()=> cart.addItemToCart(id)}
                   size="sm" className=" text-white"variant="btn btn-outline-secondary">+</Button>
                  <Button
                  onClick={()=> cart.removeItemFromCart(id)}
                  size="sm" className="mx-2 text-white"variant="btn btn-outline-secondary">-</Button>
-                 <Button size="sm" className=" mb-1 text-white mt-1" variant="btn btn-outline-danger" onClick={()=>cart.deleteFromCart(id) }>حذف</Button>
+                 <Button size="sm" className=" text-white " variant="btn btn-outline-danger" onClick={()=>cart.deleteFromCart(id) }>حذف</Button>
             </Col>
         </Form>
         </>

@@ -9,7 +9,7 @@ const productList = [
         id:'2',
         title: 'headset',
         price:73,
-        image:'/images/headset2.jpg' 
+        image:'/images/headphone.jpg' 
     },
     {
         id:'3',
@@ -21,7 +21,7 @@ const productList = [
         id:'4',
         title: 'ipad',
         price:4000,
-        image:'/images/ipad2.jpg' 
+        image:'/images/ipad.jpg' 
     },
     {
         id:'5',
@@ -37,9 +37,9 @@ const productList = [
     },
     {
         id:'7',
-        title: 'mac',
+        title: 'iphon x',
         price:5000,
-        image:'/images/mac.png' 
+        image:'/images/iphone-.jpg' 
     },
     {
         id:'8',

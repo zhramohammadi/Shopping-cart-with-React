@@ -81,7 +81,7 @@ function Navbar(){
                     {cart.items.map((item)=>(
                         <CartProduct key={item.id} id={item.id} quantity={item.quantity}></CartProduct>
                     ))}
-                    <p  className="border-bottom border-secondary"></p>
+                    <p  className="border-bottom border-secondary opacity"></p>
                     <h3 >مجموع قیمت :{cart.getTotalAmount()}</h3>
                         </>
                     ):(

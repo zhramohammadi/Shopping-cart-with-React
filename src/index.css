@@ -12,3 +12,9 @@ body{
   opacity:0.5;
 }
 
+.image{
+  position: absolute;
+  right:70%;
+  
+  
+}
